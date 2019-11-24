@@ -10,6 +10,9 @@ function getAll() {
 function getById(id: number) {
     return users.find(e => e.id === id);
 }
+function getByEmail(email: string) {
+    return users.find(e => e.email === email);
+}
 function insert(user: User) {
     user.id = Math.random();
     users.push(user);
@@ -24,4 +27,4 @@ function deleteByid(id: number) {
 }
 
 export const database = 
-    {getAll, getById, insert, update, deleteByid};
+    {getAll, getById, insert, update, deleteByid, getByEmail};

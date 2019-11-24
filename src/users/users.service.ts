@@ -21,4 +21,8 @@ export class UsersService {
         return database.deleteByid(id);
     }
 
+    findByEmail(email: string) {
+        return database.getByEmail(email);
+    }
+
 }
